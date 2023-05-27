@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+
+    <style>
+        .required::after {content: '*'; color: red}
+    </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -153,7 +157,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('category.index') }}" class="nav-link">
                             <i class="nav-icon far fa-list-alt"></i>
                             <p>
                                 Категории
@@ -161,7 +165,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('tag.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-tags"></i>
                             <p>
                                 Теги
@@ -169,7 +173,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('color.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-palette"></i>
                             <p>
                                 Цвета
@@ -177,7 +181,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('user.index') }}" class="nav-link">
                             <i class="nav-icon fa fa-users"></i>
                             <p>
                                 Пользователи
